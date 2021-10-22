@@ -7,11 +7,11 @@
 		<style>
 			body {
 				/* background: linear-gradient(rgba(0,0,0,1) 20%, rgba(70,192,22,1) 300%); */
-				position: relative;
+				/* position: relative;
 				box-sizing: border-box;
 				background-image: url('https://ak.picdn.net/shutterstock/videos/5890784/preview/stock-footage-one-minute-long-loop-features-white-clouds-floating-through-a-deep-blue-sky-fade-transition-at-end.mp4');
 				background-position: center;
-				background-size: cover;
+				background-size: cover; */
 			}
 			.loading {
 				color: black;
@@ -24,7 +24,7 @@
 			}
 			.loading::after {
 	      display: inline-block;
-	      animation: dotty steps(1,end) 1s infinite;
+	      animation: dotty steps(1,end) 2s infinite;
 	      content: '';
 	    }
 	    @keyframes dotty {
@@ -35,11 +35,10 @@
 	        100% { content: ''; }
 	    }
 
-
 			.box {
 				height: 100px;
-				width: 400px;
-				opacity: 50%;
+				width: 320px;
+				opacity: 20%;
 				background-color: lightgray;
 				border: 1px solid black;
 				position: absolute;
@@ -47,7 +46,9 @@
 				left: 50%;
 				transform: translate(-50%, -50%);
 			}
+
 			.fullscreen-bg {
+				filter: grayscale(100%);
 		    position: fixed;
 		    top: 0;
 		    right: 0;
@@ -70,8 +71,8 @@
 	<body>
 
 		<div class="fullscreen-bg">
-	    <video loop muted autoplay poster="img/clouds.mp4" class="fullscreen-bg__video">
-        <source src="img/clouds.mp4" type="video/mp4">
+	    <video loop muted autoplay poster="https://ak.picdn.net/shutterstock/videos/5890784/preview/stock-footage-one-minute-long-loop-features-white-clouds-floating-through-a-deep-blue-sky-fade-transition-at-end.mp4" class="fullscreen-bg__video">
+        <source src="https://ak.picdn.net/shutterstock/videos/5890784/preview/stock-footage-one-minute-long-loop-features-white-clouds-floating-through-a-deep-blue-sky-fade-transition-at-end.mp4" type="video/mp4">
 	    </video>
 		</div>
 
