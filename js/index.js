@@ -12,6 +12,8 @@ const express = require('express');
 const socketio = require('socket.io');
 const formatMessage = require('./helpers/formatDate')
 
+const expressLayouts = require('express-ejs-layouts');
+
 const {
   getActiveUser,
   exitRoom,
@@ -22,6 +24,18 @@ const {
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
+
+
+
+// app.get('/', function (req, res) {
+//   res.render('index', {});
+// });
+app.set('view engine', 'ejs');
+// app.use(expressLayouts);
+
+
+
+
 
 // Set public folder
 app.use(express.static(path.join(__dirname, 'public')));
