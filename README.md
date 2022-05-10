@@ -1,1 +1,1 @@
-"# urlcyberpalace.com" 
+"# urlcyberpalace.loading" 
